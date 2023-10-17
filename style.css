@@ -6,7 +6,7 @@
 }
 .wrapper {
   display: flex;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: relative;
 }
 
@@ -29,9 +29,9 @@
 }
 
 .left > div:hover {
-  background-color: #5C5C5C;
+  background-color: #5c5c5c;
   opacity: 1;
-} 
+}
 
 .right {
   width: 90vw;
@@ -61,10 +61,10 @@
   width: 100%;
   padding-left: 13%;
   padding-right: 13%;
-  
 }
 .items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
@@ -92,16 +92,45 @@
   padding: 20px;
   padding-left: 50px;
 }
+@media only screen and (min-width: 769px) {
+  .wrapper {
+    display: flex;
+    background-color: #FFFFFF;
+    position: relative;
+  }
+  .left {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 20vw;
+  }
+  .item {
+    width: 48%;
+  }
+  .right {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .footer {
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+  }
+}
 
-@media only screen and (min-width: 768px)  {
-  .wrapper{
+@media only screen and (max-width: 768px) {
+  .wrapper {
     flex-direction: column;
   }
   .left {
     flex-direction: row;
     height: 100%;
   }
-  .right, .left {
+  .right,
+  .left {
     width: 100%;
   }
   .items {
@@ -124,15 +153,16 @@
   }
 }
 
-@media only screen and (min-width: 414px) {
-  .wrapper{
+@media only screen and (max-width: 414px) {
+  .wrapper {
     flex-direction: column;
   }
   .left {
     flex-direction: row;
     height: 100%;
   }
-  .right, .left {
+  .right,
+  .left {
     width: 100%;
   }
   .items {
